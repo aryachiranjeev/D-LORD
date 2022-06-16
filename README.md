@@ -2,6 +2,7 @@
 
 The purpose of this repo is to understand better the paper and do also some experiments with code.
 The paper name is "D-LORD: DYSL-AI Database for Low-Resolution Disguised Face Recognition"
+
 We provides baseline results on our proposed datasets for various components:
 ## Face Detection
 Face Detection is performed on the video frames in-order to extract the region of interest. In this study, we utilize three face detection algorithms:
