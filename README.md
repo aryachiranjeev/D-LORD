@@ -83,6 +83,6 @@ Three state-of-the-art Face verification techniques have been taken into conside
    
 It has been observed that ElasticFace performs better at 5m and 7m distances, while ArcFace performs better for distances more than 10m and 15m. The performance of LightCNN is significantly lower than the other recognition models. 
 
-The detailed results are discussed in the paper D-LORD.
+The detailed results are discussed in the paper.
 
 
