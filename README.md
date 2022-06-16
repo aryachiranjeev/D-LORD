@@ -64,8 +64,8 @@ Face restoration techniques are used to improve the quality of low-resolution fa
    
 It is observed that GFP-GAN takes less time for super resolution of the faces. 
 
-## Face Verification
-Three state-of-the-art Face verification techniques have been taken into consideration.  
+## Face Recognition
+The three state-of-the-art Face Recognition algorithms have been taken into consideration for performing the experiments:  
 1. ArcFace 
    Github link - https://github.com/deepinsight/insightface/tree/master/recognition/arcface_torch
    
