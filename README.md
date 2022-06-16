@@ -30,14 +30,17 @@ It has been observed that YoloV5Face yields greater Mean IOU(mIOU) for all dista
 To select the best frames for face recognition, we divide the surveillance videos into four parts based on the subject's distances from the camera (5m, 7m, 10m, and 15m). From each part, we select three best frames using three frame selection algorithms:
 1. DWT
    Github link - https://ieeexplore.ieee.org/document/7850956
+   
    This algorithm took 7.90 ms per frame
 
 2. FQ
    Github link - https://github.com/uam-biometrics/FaceQnet
+   
    This algorithm took 50.60 ms per frame
 
 3. SER-FIQ
    Github link - https://github.com/pterhoer/FaceImageQuality
+   
    This algorithm took 518.00 ms per frame
    
 From our experiments, SER-FIQ proves to be the best frame selection algorithm, but its per frame inference time is 65 times higher than the DWT-based method. SER-FIQ yields 79.35% GAR at 5m and 49.45% GAR at 15m. Further results and bar plots are shown in the paper.
@@ -47,14 +50,17 @@ From our experiments, SER-FIQ proves to be the best frame selection algorithm, b
 Face restoration techniques are used to improve the quality of low-resolution facial images:
 1. GFP-GAN
    Github link - https://github.com/TencentARC/GFPGAN
+   
    This algorithm took 11.00 ms per frame
 
 2. PSFR-GAN
    Github link - https://github.com/chaofengc/PSFRGAN
+   
    This algorithm took 100.00 ms per frame
 
 3. Real-ESRGAN
    Github link - https://github.com/xinntao/Real-ESRGAN
+   
    This algorithm took 52.20 ms per frame
    
 It is observed that GFP-GAN takes less time for super resolution of the faces. 
@@ -63,14 +69,17 @@ It is observed that GFP-GAN takes less time for super resolution of the faces.
 Three state-of-the-art Face verification techniques have been taken into consideration.  
 1. ArcFace 
    Github link - https://github.com/deepinsight/insightface/tree/master/recognition/arcface_torch
+   
    This algorithm took 4.21 ms per frame
 
 2. LightCNN
    Github link - https://github.com/AlfredXiangWu/LightCNN
+   
    This algorithm took 67.00 ms per frame
 
 3. ElasticFace
    Github link - https://github.com/fdbtrs/ElasticFace
+   
    This algorithm took 58.64 ms per frame
    
 It has been observed that ElasticFace performs better at 5m and 7m distances, while ArcFace performs better for distances more than 10m and 15m. The performance of LightCNN is significantly lower than the other recognition models. 
