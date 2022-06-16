@@ -1,10 +1,9 @@
 # D-LORD
-The purpose of this repo is to understand better the paper and do also some experiments with code.
-The paper name is "D-LORD: DYSL-AI Database for Low-Resolution Disguised Face Recognition".
 
 D-LORD is a large-scale dataset that aims at strengthening the research on low-resolution disguised face detection. It leverages surveillance videos where the subjects may or may not be wearing disguise accessories, such as hats, beards and mustaches, sunglasses, and face masks.
  
-**figure 1 from paper**
+![collage_page-0001](https://user-images.githubusercontent.com/31439731/174141468-d82f1ba6-d52a-40e6-861d-ff073a0613ba.jpg)
+
 We benchmark the performance of various face detection, face recognition, face restoration, and frame selection algorithms on the proposed D-LORD.
 
 ## Face Detection
