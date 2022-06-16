@@ -1,4 +1,4 @@
-# D-LORD
+# D-LORD: DYSL-AI Database for Low-Resolution Disguised Face Recognition
 
 D-LORD is a large-scale dataset that aims at strengthening the research on low-resolution disguised face detection. It leverages surveillance videos where the subjects may or may not be wearing disguise accessories, such as hats, beards and mustaches, sunglasses, and face masks.
  
