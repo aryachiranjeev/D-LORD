@@ -1,9 +1,12 @@
 # D-LORD
-
 The purpose of this repo is to understand better the paper and do also some experiments with code.
-The paper name is "D-LORD: DYSL-AI Database for Low-Resolution Disguised Face Recognition"
+The paper name is "D-LORD: DYSL-AI Database for Low-Resolution Disguised Face Recognition".
 
-We provides baseline results on our proposed datasets for various components:
+D-LORD is a large-scale dataset that aims at strengthening the research on low-resolution disguised face detection. It leverages surveillance videos where the subjects may or may not be wearing disguise accessories, such as hats, beards and mustaches, sunglasses, and face masks.
+ 
+**figure 1 from paper**
+We benchmark the performance of various face detection, face recognition, face restoration, and frame selection algorithms on the proposed D-LORD.
+
 ## Face Detection
 Face Detection is performed on the video frames in-order to extract the region of interest. In this study, we utilize three face detection algorithms:
 1. YoloV5Face
@@ -18,10 +21,10 @@ Face Detection is performed on the video frames in-order to extract the region o
    Github link - https://github.com/vitoralbiero/img2pose
    This Detection algorithm took 78.02 ms per frame
    
-It has been observed that YoloV5Face greater Mean IOU(mIOU) for all distances 5m(96%), 7m(92%), 10m(89%), 15m(85%) as compared to other Face detction algorithms. 
+It has been observed that YoloV5Face yields greater Mean IOU(mIOU) for all distances, i.e. 5m (96%), 7m (92%), 10m (89%), and 15m (85%). This performance is better as compared to other Face detection algorithms.
    
 ## Frame Selection
-For selecting best frames for face recognition, we divided the video into four parts based on the distances upto 5m, 7m, 10m, 15m. From each part we select 3 frames on the bases of three frame selection algorithms that have been used:
+To select the best frames for face recognition, we divide the surveillance videos into four parts based on the subject's distances from the camera (5m, 7m, 10m, and 15m). From each part, we select three best frames using three frame selection algorithms:
 1. DWT
    Github link - 
    This algorithm took 7.90 ms per frame
@@ -34,12 +37,11 @@ For selecting best frames for face recognition, we divided the video into four p
    Github link - 
    This algorithm took 518.00 ms per frame
    
-It has been observed that SER-FIQ takes a lot of time in selecting good frame for further face recognition but yet it yields the best performance for Face recognition algorithms discussed in THE paper. SER-FIQ yields 79.35% GAR at 5m and 49.45% GAR at 15m. Further results and bar plots are shown in the paper D-LORD.
-
+From our experiments, SER-FIQ proves to be the best frame selection algorithm, but its per frame inference time is 65 times higher than the DWT-based method. SER-FIQ yields 79.35% GAR at 5m and 49.45% GAR at 15m. Further results and bar plots are shown in the paper.
 
 
 ## Face Restoration
-Face restoration techniques have been used as it lead to significant improvement in Face Verification performance. Three Face Restoration algorithms used are:
+Face restoration techniques are used to improve the quality of low-resolution facial images:
 1. GFP-GAN
    Github link - https://github.com/TencentARC/GFPGAN
    This algorithm took 11.00 ms per frame
@@ -52,7 +54,7 @@ Face restoration techniques have been used as it lead to significant improvement
    Github link - https://github.com/xinntao/Real-ESRGAN
    This algorithm took 52.20 ms per frame
    
-It has been observed that GFP-GAN takes less time for super resolution of the faces. 
+It is observed that GFP-GAN takes less time for super resolution of the faces. 
 
 ## Face Verification
 Three state-of-the-art Face verification techniques have been taken into consideration.  
@@ -68,7 +70,7 @@ Three state-of-the-art Face verification techniques have been taken into conside
    Github link - https://github.com/fdbtrs/ElasticFace
    This algorithm took 58.64 ms per frame
    
-It has been observed that Elastic Face performs better upto 5m and 7m distances and ArcFace perform better for distances more than 10m and upto 15m. Whereas LightCNN perform worst for all four distances.
+It has been observed that ElasticFace performs better at 5m and 7m distances, while ArcFace performs better for distances more than 10m and 15m. The performance of LightCNN is significantly lower than the other recognition models. 
 
 The detailed results are discussed in the paper D-LORD.
 
