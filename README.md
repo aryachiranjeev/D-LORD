@@ -21,7 +21,7 @@ Face Detection is performed on the video frames in-order to extract the region o
 It has been observed that YoloV5Face greater Mean IOU(mIOU) for all distances 5m(96%), 7m(92%), 10m(89%), 15m(85%) as compared to other Face detction algorithms. 
    
 ## Frame Selection
-For selecting best frames for face recognition, three algorithms have been tested:
+For selecting best frames for face recognition, we divided the video into four parts based on the distances upto 5m, 7m, 10m, 15m. From each part we select 3 frames on the bases of three frame selection algorithms that have been used:
 1. DWT
    Github link - 
    This algorithm took 7.90 ms per frame
@@ -34,7 +34,7 @@ For selecting best frames for face recognition, three algorithms have been teste
    Github link - 
    This algorithm took 518.00 ms per frame
    
-It has been observed that SER-FIQ takes less time in selecting good frame for further face recognition and also yields the best performance for Face recognition algorithms discussed in THE paper. SER-FIQ yields 79.35% GAR at 5m and 49.45% GAR at 15m. Further results and bar plots are shown in the paper D-LORD.
+It has been observed that SER-FIQ takes a lot of time in selecting good frame for further face recognition but yet it yields the best performance for Face recognition algorithms discussed in THE paper. SER-FIQ yields 79.35% GAR at 5m and 49.45% GAR at 15m. Further results and bar plots are shown in the paper D-LORD.
 
 
 
