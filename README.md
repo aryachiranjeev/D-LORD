@@ -2,8 +2,7 @@
 
 The purpose of this repo is to understand better the paper and do also some experiments with code.
 The paper name is "D-LORD: DYSL-AI Database for Low-Resolution Disguised Face Recognition"
-
-It Comprises of various components:
+We provides baseline results on our proposed datasets for various components:
 ## Face Detection
 Face Detection is performed on the video frames in-order to extract the region of interest. In this study, we utilize three face detection algorithms:
 1. YoloV5Face
@@ -41,15 +40,15 @@ It has been observed that SER-FIQ takes a lot of time in selecting good frame fo
 ## Face Restoration
 Face restoration techniques have been used as it lead to significant improvement in Face Verification performance. Three Face Restoration algorithms used are:
 1. GFP-GAN
-   Github link - 
+   Github link - https://github.com/TencentARC/GFPGAN
    This algorithm took 11.00 ms per frame
 
 2. PSFR-GAN
-   Github link - 
+   Github link - https://github.com/chaofengc/PSFRGAN
    This algorithm took 100.00 ms per frame
 
 3. Real-ESRGAN
-   Github link - 
+   Github link - https://github.com/xinntao/Real-ESRGAN
    This algorithm took 52.20 ms per frame
    
 It has been observed that GFP-GAN takes less time for super resolution of the faces. 
@@ -57,11 +56,11 @@ It has been observed that GFP-GAN takes less time for super resolution of the fa
 ## Face Verification
 Three state-of-the-art Face verification techniques have been taken into consideration.  
 1. ArcFace 
-   Github link - 
+   Github link - https://github.com/deepinsight/insightface/tree/master/recognition/arcface_torch
    This algorithm took 4.21 ms per frame
 
 2. LightCNN
-   Github link - 
+   Github link - https://github.com/AlfredXiangWu/LightCNN
    This algorithm took 67.00 ms per frame
 
 3. ElasticFace
