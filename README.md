@@ -11,14 +11,17 @@ We benchmark the performance of various face detection, face recognition, face r
 Face Detection is performed on the video frames in-order to extract the region of interest. In this study, we utilize three face detection algorithms:
 1. YoloV5Face
    Github link - https://github.com/deepcam-cn/yolov5-face
+   
    This Detection algorithm took 24.20 ms per frame
    
 2. RetinaFace
    Github link - https://github.com/elliottzheng/face-detection
+   
    This Detection algorithm took 308.45 ms per frame
  
 3. Img2Pose
    Github link - https://github.com/vitoralbiero/img2pose
+   
    This Detection algorithm took 78.02 ms per frame
    
 It has been observed that YoloV5Face yields greater Mean IOU(mIOU) for all distances, i.e. 5m (96%), 7m (92%), 10m (89%), and 15m (85%). This performance is better as compared to other Face detection algorithms.
@@ -26,15 +29,15 @@ It has been observed that YoloV5Face yields greater Mean IOU(mIOU) for all dista
 ## Frame Selection
 To select the best frames for face recognition, we divide the surveillance videos into four parts based on the subject's distances from the camera (5m, 7m, 10m, and 15m). From each part, we select three best frames using three frame selection algorithms:
 1. DWT
-   Github link - 
+   Github link - https://ieeexplore.ieee.org/document/7850956
    This algorithm took 7.90 ms per frame
 
 2. FQ
-   Github link - 
+   Github link - https://github.com/uam-biometrics/FaceQnet
    This algorithm took 50.60 ms per frame
 
 3. SER-FIQ
-   Github link - 
+   Github link - https://github.com/pterhoer/FaceImageQuality
    This algorithm took 518.00 ms per frame
    
 From our experiments, SER-FIQ proves to be the best frame selection algorithm, but its per frame inference time is 65 times higher than the DWT-based method. SER-FIQ yields 79.35% GAR at 5m and 49.45% GAR at 15m. Further results and bar plots are shown in the paper.
