@@ -85,4 +85,8 @@ It has been observed that ElasticFace performs better at 5m and 7m distances, wh
 
 The detailed results are discussed in the paper.
 
+## Downscaled LR Vs Real LR
+We provide some samples of downscaled LR and real LR images in various resolutions. It can be observed that there is a significant difference in the visual quality of real and synthetic images.
+![LR](https://user-images.githubusercontent.com/31439731/186117319-99936363-23db-4bfa-9f2c-194304192663.jpg)
+
 
