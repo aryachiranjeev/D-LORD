@@ -90,4 +90,4 @@ We provide some samples of downscaled LR and real LR images in various resolutio
 ![LR](https://user-images.githubusercontent.com/31439731/186117319-99936363-23db-4bfa-9f2c-194304192663.jpg)
 
 ## Datasheet for D-LORD
-
+Link for Datasheet for D-LORD dataset - https://github.com/aryachiranjeev/D-LORD/blob/main/Datasheet%20for%20D-LORD.pdf
